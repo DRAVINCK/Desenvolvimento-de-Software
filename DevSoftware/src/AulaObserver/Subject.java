@@ -16,14 +16,7 @@ public class Subject {
 
     public void setState(int state) {
         State = state;
-    }
-
-    public List<Observer> getObservers() {
-        return observers;
-    }
-
-    public void setObservers(List<Observer> observers) {
-        this.observers = observers;
+        this.notifyAllOBservers();
     }
 
     public void attach(Observer observer){

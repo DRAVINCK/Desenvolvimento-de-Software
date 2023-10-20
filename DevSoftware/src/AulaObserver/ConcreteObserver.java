@@ -1,13 +1,13 @@
 package AulaObserver;
 
 public class ConcreteObserver extends Observer {
-    void ConcreteObserver(Subject subjectCO){
+    public ConcreteObserver(Subject subjectCO){
         this.subject = subjectCO;
-        this.subject.attach();
+        this.subject.attach(this);
     }
 
     @Override
     public void update() {
-
+        System.out.println("O observador foi notificado. Novo estado do objeto " + this.subject.getState());
     }
 }
